@@ -1,0 +1,143 @@
+/* src/styles/LandingPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, 'Lovelyn', serif;
+}
+
+
+#bgvid {
+  object-fit: cover;
+  width: 120vw;
+  height: 120vh;
+  position: fixed;
+  top: -10vh;
+  left: -10vw;
+  z-index: -1;
+  opacity: 0.9;
+  animation: pan 30s linear infinite;
+}
+
+
+@keyframes pan {
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 29, 31, 0.5);
+  z-index: 0;
+}
+
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 2em;
+  transform: translateY(-50%);
+  color: white;
+  padding: 20px;
+  max-width: 500px;
+  font-family: 'Lovelyn', sans-serif;
+  z-index: 1;
+}
+
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f0efee;
+  text-shadow: 2px 2px 4px rgba(42, 18, 222, 0.9);
+  animation: fadeInDown 1s ease-out;
+}
+
+.content p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #f7f1ec;
+  text-shadow: 2px 2px 4px rgba(50, 16, 220, 0.9);
+  animation: fadeInDown 1s ease-out 0.5s;
+
+  -webkit-animation: fadeInDown 1s ease-out 0.5s;
+}
+
+
+.explore-button {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  border: 4px solid #ff6f61;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInDown 1s ease-out 1s;
+}
+
+
+.explore-button:hover {
+  background-color: transparent;
+  color: #ff6f61;
+  transform: scale(1.05);
+}
+
+
+.explore-button:focus {
+  outline: none;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .content {
+    left: 1em;
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  .explore-button {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+}

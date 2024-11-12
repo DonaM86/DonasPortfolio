@@ -1,0 +1,255 @@
+body {
+  font-family: Georgia, Times, 'Roboto', serif;
+  line-height: 1.6;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #dddeda;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 100px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #333;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.skills-section {
+ float:left;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-item {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.experience-item p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #474747;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.tech-list li {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.tech-list li:last-child {
+  margin-right: 0;
+}
+
+.tech-list strong {
+  color: #333;
+}
+
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* experience */
+.tech-item {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.tech-item:hover {
+  background-color: #e0e0e0;
+}
+
+.my-journey img,
+.vision video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  transition: all 0.5s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+.my-journey img:hover,
+.vision video:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .about-me {
+      padding: 10px;
+      margin: 20px;
+  }
+
+  header h1 {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  header p {
+      font-size: 1rem;
+      text-align: center;
+
+  }
+
+  section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      align-items: center;
+  }
+
+  .my-journey,
+  .vision {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .my-journey img,
+  .vision video {
+      width: 80%;
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  .my-journey div,
+  .vision div {
+      padding: 10px;
+      text-align: center;
+  }
+
+  .experience-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .experience-item {
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+  }
+
+  .experience-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+  }
+
+  .experience-item p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+  }
+
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .tech-container {
+    justify-content: center;
+  }
+  .skills-section {
+    text-align: center;
+    font-size: 1rem;}
+
+  .tech-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0;
+  }
+}
+
+}
