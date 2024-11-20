@@ -1,11 +1,10 @@
 [build]
   command = "npm run build"
-
   publish = "build"
 
-  environment = {
+  # Korrekt sätt att definiera miljövariabler i TOML
+  [build.environment]
     NODE_ENV = "production"
-  }
 
 [[redirects]]
   from = "/*"
