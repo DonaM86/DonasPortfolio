@@ -1,10 +1,9 @@
 [build]
   command = "npm run build"
-  publish = "build"
+  publish = "build"  # Se till att detta är rätt mapp, vanligtvis 'build' för React
 
-  # Korrekt sätt att definiera miljövariabler i TOML
-  [build.environment]
-    NODE_ENV = "production"
+  # Specifik Node.js-version, justera efter behov
+  environment = { NODE_ENV = "production", NODE_VERSION = "16" }
 
 [[redirects]]
   from = "/*"
