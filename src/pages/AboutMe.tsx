@@ -125,110 +125,95 @@ const AboutMe: React.FC = () => {
       </section>
 
       {/* Experience Section */}
+      {/* Experience Section */}
       <section
         className={`experience fade-in ${
           visibleSections.experience ? "visible" : ""
         }`}
         style={{ marginBottom: "40px" }}
       >
-        <h2>Experience</h2>
-        <div className="experience-container">
-          <div className="experience-item">
-            <h3>Frontend Developer</h3>
-            <p>
-              I am a passionate Frontend Developer dedicated to crafting
-              seamless user experiences and delivering visually engaging
-              designs. My journey into the world of technology began with a
-              deep-seated love for creating and problem-solving, which naturally
-              led me to embrace web development. I thrive on the challenge of
-              turning complex ideas into simple, beautiful interfaces that
-              delight users and enhance their interaction with the digital
-              world.
+        <h2 className="section-title">My Experience</h2>
+
+        {/* Experience Cards */}
+        <div className="experience-grid">
+          {/* Frontend Developer Card */}
+          <div className="experience-card">
+            <h3 className="card-title">Frontend Developer – Systra</h3>
+            <p className="card-description">
+              During my time at Systra, I have honed my skills in creating
+              intuitive and engaging user experiences while contributing to
+              innovative projects in a dynamic team environment. As the sole
+              Frontend Developer during a company transition, I managed multiple
+              projects and played a key role in enhancing data visualization and
+              user interaction.
             </p>
 
-            <h4>Technologies & Skills:</h4>
-            <div className="tech-container">
-              <div className="tech-item">HTML</div>
-              <div className="tech-item">CSS</div>
-              <div className="tech-item">JavaScript</div>
-              <div className="tech-item">React</div>
-              <div className="tech-item">TypeScript</div>
-              <div className="tech-item">Git</div>
-              <div className="tech-item">Responsive Design</div>
-              <div className="tech-item">UI/UX</div>
-              <div className="tech-item">WordPress</div>
-              <div className="tech-item">Drupal</div>
-              <div className="tech-item">PHP</div>
-              <div className="tech-item">Headless CMS</div>
-              <div className="tech-item">MongoDB</div>
-              <div className="tech-item">Node.js</div>
-              <div className="tech-item">Vue.js</div>
-              <div className="tech-item">Express</div>
-              <div className="tech-item">SQLite</div>
-              <div className="tech-item">PostCSS</div>
-              <div className="tech-item">SASS</div>
-            </div>
+            <h4>Key Achievements:</h4>
+            <ul className="achievements-list">
+              <li>
+                <strong>Project Leadership:</strong> Led frontend development
+                during a company transition, successfully adapting to a changing
+                team structure and delivering critical projects.
+              </li>
+              <li>
+                <strong>React Migration:</strong> Developed React components
+                (graphs, Gantt charts) to replace Tableau, significantly
+                improving data visualization and user experience.
+              </li>
+              <li>
+                <strong>Interactive Frontend Development:</strong> Built the
+                frontend for Maintenance Optimizer, which was nominated in
+                Systra's innovation program Spark.
+              </li>
+            </ul>
 
-            <div className="skills-section">
-              <h4>Project Management Skills:</h4>
-              <ul>
-                <li>Implementing Agile methodologies (Scrum and Kanban)</li>
-                <li>Using project management tools (JIRA, Trello)</li>
-                <li>Version control with Git</li>
-                <li>
-                  Understanding group dynamics and effective team collaboration
-                </li>
-                <li>
-                  Facilitating communication with stakeholders and requirements
-                  gathering
-                </li>
-                <li>
-                  Applying project management models and ensuring quality
-                  assurance
-                </li>
-              </ul>
-            </div>
+            <h4>Technologies & Tools:</h4>
+            <ul className="tech-list">
+              {[
+                "React",
+                "Material-UI",
+                "DHTMLX Gantt",
+                "Git",
+                "DevOps Azure",
+                "Python",
+                "Figma",
+                "Scrum",
+                "UX & UI",
+              ].map((tech) => (
+                <li key={tech}>{tech}</li>
+              ))}
+            </ul>
+
+            <h4>Project Management Skills:</h4>
+            <ul className="skills-list">
+              <li>Implementing Agile methodologies (Scrum, Kanban)</li>
+              <li>Version control and collaboration with Git</li>
+              <li>Team collaboration and stakeholder communication</li>
+              <li>Utilizing project management tools (JIRA, Trello)</li>
+            </ul>
           </div>
 
-          <div className="experience-item">
-            <h3>Beauty Consultant</h3>
-            <p>
-              With a decade of experience in the beauty industry, I have
-              developed extensive knowledge in fragrance and skincare through
-              various courses and hands-on experience. My role as a beauty
-              consultant has allowed me to work closely with clients, helping
-              them discover products that enhance their natural beauty and fit
-              their individual needs. This journey has deepened my appreciation
-              for the importance of detail and the impact of visual aesthetics
-              in the beauty realm.
+          {/* Beauty Consultant Card */}
+          <div className="experience-card">
+            <h3 className="card-title">Beauty Consultant – Åhléns</h3>
+            <p className="card-description">
+              At Åhléns, I spent over a decade as a Beauty Consultant,
+              developing expertise in fragrance selection, skincare, and visual
+              merchandising. I excelled in client consultations, guiding
+              customers to discover products that enhanced their natural beauty
+              and individual needs. This experience refined my attention to
+              detail, deepened my understanding of aesthetics, and highlighted
+              the importance of creating memorable customer experiences.
             </p>
 
             <h4>Core Skills:</h4>
-            <ul className="tech-list">
-              <li>
-                <strong>Creative Direction</strong>
-              </li>
-              <li>
-                <strong>Client Consultation</strong>
-              </li>
-              <li>
-                <strong>Product Knowledge</strong>
-              </li>
-              <li>
-                <strong>Fragrance Selection</strong>
-              </li>
-              <li>
-                <strong>Skincare Expertise</strong>
-              </li>
-              <li>
-                <strong>Trend Analysis</strong>
-              </li>
-              <li>
-                <strong>Visual Merchandising</strong>
-              </li>
-              <li>
-                <strong>Effective Communication</strong>
-              </li>
+            <ul className="skills-list">
+              <li>Client Consultation</li>
+              <li>Fragrance Selection</li>
+              <li>Skincare Expertise</li>
+              <li>Visual Merchandising</li>
+              <li>Trend Analysis</li>
+              <li>Effective Communication</li>
             </ul>
           </div>
         </div>

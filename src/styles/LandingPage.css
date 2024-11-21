@@ -64,7 +64,7 @@
 
 
 .content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
   color: #f0efee;
@@ -88,7 +88,7 @@
   margin-top: 20px;
   font-size: 1.5rem;
   padding: 15px 40px;
-  border: 4px solid #ff6f61;
+  border: 4px solid #dbe2db;
   background-color: transparent;
   color: white;
   cursor: pointer;
@@ -99,8 +99,12 @@
 
 .explore-button:hover {
   background-color: transparent;
-  color: #ff6f61;
-  transform: scale(1.05);
+  color: #77db89;
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
 }
 
 
@@ -129,7 +133,7 @@
   }
 
   .content h1 {
-    font-size: 2.5rem;
+    font-size: 1.5em;
   }
 
   .content p {

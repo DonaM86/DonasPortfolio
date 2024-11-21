@@ -72,7 +72,7 @@ const projects: ProjectData[] = [
     title: "Gatsby",
     subtitle: "Personal Portfolio Showcase",
     description: `This portfolio website highlights my work and skills, built using React and CSS with modern design features.`,
-    imageUrl: "/portfolio/portfolio.JPG",
+    imageUrl: "/portfolio/portfolio2.JPG",
     techStack: ["React", "CSS", "Gatsby", "Contentful"],
   },
   {
