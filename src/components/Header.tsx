@@ -36,11 +36,11 @@ const Header: React.FC<{ className?: string }> = ({ className }) => (
         expertise together to turn ideas into captivating digital experiences!
       </p>
       <p>
-        {" "}
         <strong>
           If you’re interested in working together, I’d love to hear from you.
         </strong>
       </p>
+
       <div className="button-container">
         <a href="/portfolio/LiridonaCV.pdf" className="link-button" download>
           Download My Resume

@@ -45,7 +45,7 @@ interface ProjectData {
 const projects: ProjectData[] = [
   {
     id: 1,
-    title: "SportsPlanner:",
+    title: "SportsPlanner",
     subtitle: "Web Application for Football Coaches",
     description: `SportsPlanner is designed to simplify training planning, player administration, and team communication. By digitalizing these processes, I created a tool that reduces manual work, allowing coaches to focus more on training.`,
     imageUrl: "/portfolio/sportsplanner.JPG",
@@ -115,76 +115,33 @@ const Project = () => {
   };
 
   return (
-    <div className={`project-wrapper ${showAllProjects ? "show-all" : ""}`}>
-      <button
-        className="show-all-btn"
-        onClick={() => setShowAllProjects((prev) => !prev)}
-      >
-        {showAllProjects ? "Show One Project at a Time" : "Show All Projects"}
-      </button>
+    <div className="project-background">
+      <div className={`project-wrapper ${showAllProjects ? "show-all" : ""}`}>
+        <button
+          className="show-all-btn"
+          onClick={() => setShowAllProjects((prev) => !prev)}
+        >
+          {showAllProjects ? "Show One Project at a Time" : "Show All Projects"}
+        </button>
 
-      {showAllProjects ? (
-        <div className="all-projects-container">
-          {projects.map((project) => (
-            <motion.div
-              className="project-card"
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.5 }}
-              onClick={() => handleCardClick(project.id)}
-            >
-              <div className="project-image">
-                <img src={project.imageUrl} alt={project.title} />
-              </div>
-              <div className="project-title">{project.title}</div>
-              <div className="project-tech-stack">
-                {project.techStack.map((tech) => {
-                  const icon = techIcons[tech];
-                  return (
-                    <span key={tech}>
-                      {icon ? (
-                        React.cloneElement(icon, { key: tech })
-                      ) : (
-                        <span>{tech}</span>
-                      )}
-                    </span>
-                  );
-                })}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      ) : (
-        <div className="project-container">
-          <AnimatePresence mode="wait">
-            <motion.div
-              className="project-card"
-              key={currentProjectData.id}
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.7 }}
-            >
-              <div className="project-image">
-                <img
-                  src={currentProjectData.imageUrl}
-                  alt={currentProjectData.title}
-                />
-              </div>
-              <div className="project-info">
-                <h2>{currentProjectData.title}</h2>
-                <h3>{currentProjectData.subtitle}</h3>
-                <div className="project-description">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: currentProjectData.description,
-                    }}
-                  />
+        {showAllProjects ? (
+          <div className="all-projects-container">
+            {projects.map((project) => (
+              <motion.div
+                className="project-card"
+                key={project.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.5 }}
+                onClick={() => handleCardClick(project.id)}
+              >
+                <div className="project-image">
+                  <img src={project.imageUrl} alt={project.title} />
                 </div>
+                <div className="project-title">{project.title}</div>
                 <div className="project-tech-stack">
-                  {currentProjectData.techStack.map((tech) => {
+                  {project.techStack.map((tech) => {
                     const icon = techIcons[tech];
                     return (
                       <span key={tech}>
@@ -197,11 +154,56 @@ const Project = () => {
                     );
                   })}
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      )}
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          <div className="project-container">
+            <AnimatePresence mode="wait">
+              <motion.div
+                className="project-card"
+                key={currentProjectData.id}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="project-image">
+                  <img
+                    src={currentProjectData.imageUrl}
+                    alt={currentProjectData.title}
+                  />
+                </div>
+                <div className="project-info">
+                  <h2>{currentProjectData.title}</h2>
+                  <h3>{currentProjectData.subtitle}</h3>
+                  <div className="project-description">
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: currentProjectData.description,
+                      }}
+                    />
+                  </div>
+                  <div className="project-tech-stack">
+                    {currentProjectData.techStack.map((tech) => {
+                      const icon = techIcons[tech];
+                      return (
+                        <span key={tech}>
+                          {icon ? (
+                            React.cloneElement(icon, { key: tech })
+                          ) : (
+                            <span>{tech}</span>
+                          )}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

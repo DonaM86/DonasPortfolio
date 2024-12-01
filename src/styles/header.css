@@ -26,6 +26,7 @@ body {
   margin-left: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
+
 }
 
 .header-text h1 {
@@ -218,13 +219,12 @@ body {
 
 @media (max-width: 768px) {
   .explore-header {
-      padding: 20px 1px;
-  }
+    padding: 20px 0;
+}
 
   .collage-container {
       gap: 10px;
   }
-
 
   .collage-image {
       max-width: 100px;
@@ -233,11 +233,26 @@ body {
 
 @media (max-width: 480px) {
 
-  .explore-header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+
+  .intro-text {
+    font-size: 1.2em; /* Mindre textstorlek på mobila enheter */
   }
+
+  .header-text {
+    margin: 0 auto; /* Centrera texten */
+    padding: 10px;
+    text-align: center;
+    max-width: 90%; /* Säkerställ att texten inte är för bred */
+    margin-bottom: 20%;
+  }
+
+  .header-text p {
+    font-size: 14px; /* Mindre textstorlek */
+    line-height: 1.4; /* Bättre läsbarhet */
+
+  }
+
+
   .link-button {
     padding: 12px 16px;
     font-size: 16px;
@@ -248,6 +263,7 @@ body {
   line-height: 1.3;
   text-align: center;
   -webkit-animation: flyInText 2s ease-out forwards;
+  margin-top: 20%;
 }
 
   .collage-container {
