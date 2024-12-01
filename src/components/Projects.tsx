@@ -121,7 +121,7 @@ const Project = () => {
           className="show-all-btn"
           onClick={() => setShowAllProjects((prev) => !prev)}
         >
-          {showAllProjects ? "Show One Project at a Time" : "Show All Projects"}
+          {showAllProjects ? "Show one project at a time" : "Show All Projects"}
         </button>
 
         {showAllProjects ? (

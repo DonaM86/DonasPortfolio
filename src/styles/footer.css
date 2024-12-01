@@ -1,9 +1,12 @@
 .footer {
   background-color: #d7d7d3;
   color: #333;
-  padding: 0px 20px;
+  padding: 40px 20px;
   text-align: center;
   font-family: Arial, sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-container {
@@ -60,10 +63,15 @@
 
 @media (max-width: 600px) {
   .footer-container {
-      padding: 0 10px;
+    padding: 0 10px;
   }
 
   .social-icons {
-      font-size: 24px;
+    font-size: 24px;
+  }
+
+
+  .footer {
+    padding: 40px 10px;
   }
 }

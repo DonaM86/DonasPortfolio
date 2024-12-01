@@ -17,7 +17,15 @@ const LandingPage: React.FC = () => {
     <div className="landing-page">
       <Navbar className={isNavbarHidden ? "hidden" : ""} />
 
-      <video playsInline autoPlay muted loop poster="polina.jpg" id="bgvid">
+      <video
+        playsInline
+        autoPlay
+        muted
+        loop
+        poster="polina.jpg" // Förhandsbild innan videon är färdigladdad
+        id="bgvid"
+        preload="auto" // Ladda videon så tidigt som möjligt
+      >
         <source src="polina.webm" type="video/webm" />
         <source src="/Videooo.mp4" type="video/mp4" />
         Your browser does not support the video tag.

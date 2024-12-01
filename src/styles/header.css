@@ -235,20 +235,20 @@ body {
 
 
   .intro-text {
-    font-size: 1.2em; /* Mindre textstorlek på mobila enheter */
+    font-size: 1.2em;
   }
 
   .header-text {
-    margin: 0 auto; /* Centrera texten */
+    margin: 0 auto;
     padding: 10px;
     text-align: center;
-    max-width: 90%; /* Säkerställ att texten inte är för bred */
+    max-width: 90%; 
     margin-bottom: 20%;
   }
 
   .header-text p {
-    font-size: 14px; /* Mindre textstorlek */
-    line-height: 1.4; /* Bättre läsbarhet */
+    font-size: 14px;
+    line-height: 1.4;
 
   }
 

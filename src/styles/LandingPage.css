@@ -12,7 +12,6 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Lovelyn', serif;
 }
 
-
 #bgvid {
   object-fit: cover;
   width: 120vw;
@@ -23,8 +22,15 @@
   z-index: -1;
   opacity: 0.9;
   animation: pan 30s linear infinite;
+  visibility: visible;
+  transition: visibility 0.3s ease-out;
+  will-change: opacity;
 }
 
+/* Lägg till en bild som syns innan videon laddas */
+#bgvid[poster] {
+  visibility: visible;
+}
 
 @keyframes pan {
   0% {
@@ -38,7 +44,6 @@
   }
 }
 
-
 .overlay {
   position: absolute;
   top: 0;
@@ -48,7 +53,6 @@
   background-color: rgba(32, 29, 31, 0.5);
   z-index: 0;
 }
-
 
 .content {
   position: absolute;
@@ -61,7 +65,6 @@
   font-family: 'Lovelyn', sans-serif;
   z-index: 1;
 }
-
 
 .content h1 {
   font-size: 3rem;
@@ -79,10 +82,8 @@
   color: #f7f1ec;
   text-shadow: 2px 2px 4px rgba(50, 16, 220, 0.9);
   animation: fadeInDown 1s ease-out 0.5s;
-
   -webkit-animation: fadeInDown 1s ease-out 0.5s;
 }
-
 
 .explore-button {
   margin-top: 20px;
@@ -96,7 +97,6 @@
   animation: fadeInDown 1s ease-out 1s;
 }
 
-
 .explore-button:hover {
   background-color: transparent;
   color: #77db89;
@@ -107,11 +107,9 @@
   -o-transform: scale(1.04);
 }
 
-
 .explore-button:focus {
   outline: none;
 }
-
 
 @keyframes fadeInDown {
   from {
