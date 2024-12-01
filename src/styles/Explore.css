@@ -25,7 +25,7 @@
 
 .content-wrapper {
   margin: 40px 0;
-  margin-bottom: 50px;
+
 }
 
 .projects-container {
@@ -33,7 +33,7 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
 }
 

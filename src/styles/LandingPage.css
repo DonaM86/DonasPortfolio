@@ -124,6 +124,14 @@
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+  #bgvid {
+    width: 130vw;
+    height: 130vh;
+    top: -25vh;
+    left: -25vw;
+
+  }
+
   .content {
     left: 1em;
     padding: 10px;
