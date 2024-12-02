@@ -1,5 +1,3 @@
-/* src/styles/LandingPage.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
 .landing-page {
@@ -21,13 +19,11 @@
   left: -10vw;
   z-index: -1;
   opacity: 0.9;
-  animation: pan 30s linear infinite;
   visibility: visible;
-  transition: visibility 0.3s ease-out;
-  will-change: opacity;
+  transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
+  will-change: opacity, visibility;
 }
 
-/* Lägg till en bild som syns innan videon laddas */
 #bgvid[poster] {
   visibility: visible;
 }
@@ -101,14 +97,6 @@
   background-color: transparent;
   color: #77db89;
   transform: scale(1.04);
-  -webkit-transform: scale(1.04);
-  -moz-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  -o-transform: scale(1.04);
-}
-
-.explore-button:focus {
-  outline: none;
 }
 
 @keyframes fadeInDown {
@@ -129,7 +117,6 @@
     height: 130vh;
     top: -25vh;
     left: -25vw;
-
   }
 
   .content {

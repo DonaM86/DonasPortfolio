@@ -22,9 +22,10 @@ const LandingPage: React.FC = () => {
         autoPlay
         muted
         loop
-        poster="polina.jpg" // Förhandsbild innan videon är färdigladdad
         id="bgvid"
-        preload="auto" // Ladda videon så tidigt som möjligt
+        preload="auto"
+        poster="/lowres-thumbnail.jpg" // En lågupplöst bild medan videon laddas
+        onCanPlayThrough={(e) => e.currentTarget.play()} // Starta videon så snart möjligt
       >
         <source src="polina.webm" type="video/webm" />
         <source src="/Videooo.mp4" type="video/mp4" />
