@@ -40,7 +40,7 @@ const AboutMe: React.FC = () => {
   return (
     <div className="about-me">
       <header>
-        <h1>Hi, I'm Liridona Myftari</h1>
+        <h1>Hi, I'm Dona Myftari</h1>
         <p>
           From the world of beauty to the realm of frontend development, I've
           always had one goal: to create visually stunning and highly functional

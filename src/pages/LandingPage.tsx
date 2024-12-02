@@ -24,16 +24,27 @@ const LandingPage: React.FC = () => {
         loop
         id="bgvid"
         preload="auto"
-        poster="/lowres-thumbnail.jpg" // En lågupplöst bild medan videon laddas
-        onCanPlayThrough={(e) => e.currentTarget.play()} // Starta videon så snart möjligt
+        poster="/lowres-thumbnail.jpg" // Lågupplöst bild för snabb laddning
+        onCanPlayThrough={(e) => {
+          const video = e.currentTarget;
+          if (video.paused) {
+            video.play(); // Försök att spela om videon är pausad
+          }
+        }}
       >
-        <source src="polina.webm" type="video/webm" />
+        {/* Använd olika videokällor baserat på enhet */}
+        <source
+          src="/Videooo-720p.mp4"
+          type="video/mp4"
+          media="(max-width: 720px)"
+        />
         <source src="/Videooo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
       <div className="overlay"></div>
       <div className="content">
-        <h1>Liridona Myftari</h1>
+        <h1>Dona Myftari</h1>
         <p>Frontend Developer</p>
         <p>React & UX Design Enthusiast</p>
         <p>Exploring Backend Development</p>
