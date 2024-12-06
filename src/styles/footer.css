@@ -1,11 +1,10 @@
 .footer {
   background-color: #d7d7d3;
   color: #333;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
   font-family: Georgia, Times, 'Roboto', serif;
   position: relative;
-
   width: 100%;
 }
 
@@ -15,12 +14,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
 }
 
 .social-icons {
   display: flex;
-  gap: 30px;
-  font-size: 28px;
+  gap: 20px;
+  font-size: 35px;
   margin-bottom: 10px;
 }
 
@@ -34,15 +34,15 @@
 }
 
 .footer-text {
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .footer-contact {
-  font-size: 14px;
+  font-size: 20px;
   color: #333;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .footer-contact a {
@@ -58,7 +58,7 @@
 .footer-copyright {
   font-size: 14px;
   color: #333;
-
+  margin-top: 10px;
 }
 
 @media (max-width: 600px) {
@@ -68,10 +68,19 @@
 
   .social-icons {
     font-size: 24px;
+    gap: 15px;
   }
 
-
   .footer {
-    padding: 40px 10px;
+    padding: 15px 10px;
+  }
+
+  .footer-text,
+  .footer-contact {
+    font-size: 16px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
   }
 }
