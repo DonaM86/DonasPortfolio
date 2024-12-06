@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Explore from "./pages/Explore";
 import Navbar from "./Navbar/Navbar";
@@ -8,15 +13,19 @@ import AboutMe from "./pages/AboutMe";
 import MobileNavbar from "./Navbar/MobileNavbar";
 
 const App: React.FC = () => {
+  const location = useLocation();
+
+  const isLandingPage = location.pathname === "/";
+
   return (
-    <Router>
+    <>
+      {!isLandingPage && <Navbar />}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
           path="/explore"
           element={
             <>
-              <Navbar />
               <Explore />
               <Footer />
             </>
@@ -26,19 +35,25 @@ const App: React.FC = () => {
           path="/about"
           element={
             <>
-              <Navbar />
               <AboutMe />
               <Footer />
             </>
           }
         />
       </Routes>
-
-      <div className="mobile-navbar">
-        <MobileNavbar />
-      </div>
-    </Router>
+      {!isLandingPage && (
+        <div className="mobile-navbar">
+          <MobileNavbar />
+        </div>
+      )}
+    </>
   );
 };
 
-export default App;
+const AppWrapper: React.FC = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;
