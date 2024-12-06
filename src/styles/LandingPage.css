@@ -75,7 +75,6 @@
   transition: all 0.3s ease;
   animation: fadeInDown 1s ease-out 1s;
 }
-/* Define the fade-out animation */
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -129,13 +128,13 @@
 
 
 /* Media Queries for Mobile Devices */
-/* Media Queries for Mobile Devices */
+
 @media (max-width: 768px) {
   #bgvid {
-    width: 100vw;    /* Set width to 100% of the viewport width */
-    height: 100vh;   /* Set height to 100% of the viewport height */
-    top: 0;          /* Align the top of the video with the top of the screen */
-    left: 0;         /* Align the left of the video with the left of the screen */
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
   }
 
   .content {

@@ -39,7 +39,7 @@ const LandingPage: React.FC = () => {
 
       <div className="overlay"></div>
       <div className="content">
-        <h1>Dona Myftari</h1>
+        <h1>Liridona Myftari</h1>
         <p>Frontend Developer</p>
         <p>React & UX Design Enthusiast</p>
         <p>Exploring Backend Development</p>
