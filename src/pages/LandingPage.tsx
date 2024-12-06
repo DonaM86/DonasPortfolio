@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar/Navbar";
+import React, { useState } from "react";
 import "../styles/LandingPage.css";
 
 const LandingPage: React.FC = () => {
-  const [isNavbarHidden, setIsNavbarHidden] = useState<boolean>(true);
-
-  useEffect(() => {
-    setIsNavbarHidden(true);
-  }, []);
+  const [isExiting, setIsExiting] = useState(false);
 
   const handleExploreClick = () => {
-    window.location.href = "/explore";
+    setIsExiting(true); // Trigger the exit animation
+    setTimeout(() => {
+      window.location.href = "/explore"; // Redirect after animation
+    }, 1000); // Wait for the animation to complete before navigating
   };
 
   return (
-    <div className="landing-page">
-      <Navbar className={isNavbarHidden ? "hidden" : ""} />
-
+    <div className={`landing-page ${isExiting ? "fade-out" : ""}`}>
       <video
         playsInline
         autoPlay
@@ -24,15 +20,14 @@ const LandingPage: React.FC = () => {
         loop
         id="bgvid"
         preload="auto"
-        poster="/lowres-thumbnail.jpg" // Lågupplöst bild för snabb laddning
+        poster="/lowres-thumbnail.jpg"
         onCanPlayThrough={(e) => {
           const video = e.currentTarget;
           if (video.paused) {
-            video.play(); // Försök att spela om videon är pausad
+            video.play(); // Play the video if paused
           }
         }}
       >
-        {/* Använd olika videokällor baserat på enhet */}
         <source
           src="/Videooo-720p.mp4"
           type="video/mp4"

@@ -75,11 +75,45 @@
   transition: all 0.3s ease;
   animation: fadeInDown 1s ease-out 1s;
 }
+/* Define the fade-out animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.landing-page.fade-out #bgvid,
+.landing-page.fade-out .overlay {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+.landing-page.fade-out .content {
+  animation: fadeOutContent 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOutContent {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
 
 .explore-button:hover {
   background-color: transparent;
   color: #77db89;
   transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
 }
 
 @keyframes fadeInDown {
@@ -93,13 +127,15 @@
   }
 }
 
+
+/* Media Queries for Mobile Devices */
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   #bgvid {
-    width: 130vw;
-    height: 130vh;
-    top: -20vh;
-    left: -20vw;
+    width: 100vw;    /* Set width to 100% of the viewport width */
+    height: 100vh;   /* Set height to 100% of the viewport height */
+    top: 0;          /* Align the top of the video with the top of the screen */
+    left: 0;         /* Align the left of the video with the left of the screen */
   }
 
   .content {
