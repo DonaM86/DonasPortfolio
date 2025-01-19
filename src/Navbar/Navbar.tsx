@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Om skärmen är mindre än eller lika med 768px, sätt isMobile till true
+      setIsMobile(window.innerWidth <= 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -73,14 +73,17 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   return (
     <nav className={`navbar ${className || ""}`}>
       <div className="navbar-content">
-        {/* Här tas hamburgermenyn bort helt om vi är i mobilläge */}
+        <div className="explore-container">
+          <a
+            href="#explore"
+            className={active === "explore" ? "active" : ""}
+            onClick={() => handleLinkClick("explore")}
+          >
+            Explore
+          </a>
+        </div>
         {!isMobile && (
           <ul className="navbar-links">
-            <li className={active === "explore" ? "active explore" : "explore"}>
-              <a href="#explore" onClick={() => handleLinkClick("explore")}>
-                Explore
-              </a>
-            </li>
             {showSubmenu && (
               <>
                 <li className={active === "content" ? "active" : ""}>
