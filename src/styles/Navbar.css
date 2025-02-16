@@ -63,6 +63,12 @@
   font-weight: 600;
   border-bottom: 2px solid #333333;
 }
+@media screen and (max-width: 768px) {
+  .explore-container {
+    display: none;
+  }
+}
+
 
 @media (max-width: 768px) {
   .navbar-content {

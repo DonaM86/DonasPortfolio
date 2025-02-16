@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             <FaInstagram />
           </a>
           <a
-            href="mailto:dona.myftari86@gmail.com?subject=To%20Dona%20Myftari&body=Hi%20Dona%2C"
+            href="mailto:dona.1986@hotmail.com?subject=To%20Dona%20Myftari&body=Hi%20Dona%2C"
             aria-label="Email Dona Myftari"
           >
             <FaEnvelope />
@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
         </p>
         <p className="footer-contact">
           Contact me:{" "}
-          <a href="mailto:dona.myftari86@gmail.com?subject=To%20Dona%20Myftari&body=Hi%20Dona%2C">
-            Dona.Myftari86@gmail.com
+          <a href="mailto:dona.1986@hotmail.com?subject=To%20Dona%20Myftari&body=Hi%20Dona%2C">
+            Dona.1986@hotmail.com
           </a>
         </p>
         <p className="footer-copyright">

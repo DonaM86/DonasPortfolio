@@ -5,10 +5,10 @@ const LandingPage: React.FC = () => {
   const [isExiting, setIsExiting] = useState(false);
 
   const handleExploreClick = () => {
-    setIsExiting(true); // Trigger the exit animation
+    setIsExiting(true);
     setTimeout(() => {
-      window.location.href = "/explore"; // Redirect after animation
-    }, 1000); // Wait for the animation to complete before navigating
+      window.location.href = "/explore";
+    }, 1000);
   };
 
   return (
